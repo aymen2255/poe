@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	  xmlns:f="http://java.sun.com/jsf/core" 
+	  xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<head>
+  <meta charset="utf-8"/>
+  <title>Mobile first web app theme | first</title>
+  <meta name="description" content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui"/>
+
+
+
+  <link rel="stylesheet" href="/tpevaluation/css/bootstrap.css"/>
+  <link rel="stylesheet" href="/tpevaluation/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="/tpevaluation/css/style.css"/>
+
+</head>
+<body>
+  <!-- header -->
+  <header id="header" class="navbar navbar-sm bg bg-black">
+    <a href="docs.html" class="btn btn-link pull-right"><i class="icon-question icon-xlarge text-default"></i></a>
+    <a class="navbar-brand" href="#">first</a>
+  </header>
+  <!-- / header -->
+  <section id="content">
+    <div class="row">
+      <div class="col col-lg-4 col-offset-4 m-t-large">
+        <section class="panel">
+          <header class="panel-heading text-center">
+            Sign in
+          </header>
+          <form action="j_security_check" class="padder" method="post">
+            <div class="block">
+              <label class="control-label" for="j_username">Email :</label>
+              <input type="text" id="j_username" name="j_username" placeholder="Email"/>
+            </div>
+            <div class="block">
+              <label class="control-label" for="j_password">Mot de Passe :</label>
+              <input type="password" id="j_password" name="j_password" placeholder="Password"/>
+            </div>
+            <button class="btn btn-info" type="submit">Sign in</button>
+          </form>
+        </section>
+      </div>
+    </div>
+  </section>
+  <!-- footer -->
+  <footer id="footer">
+    <div class="text-center padder clearfix">
+      <p>
+        <small> first 2013, Mobile first web app framework base on Bootstrap</small><br/><br/>
+        <a href="#" class="btn btn-mini btn-circle btn-twitter"><i class="icon-twitter"></i></a>
+        <a href="#" class="btn btn-mini btn-circle btn-facebook"><i class="icon-facebook"></i></a>
+        <a href="#" class="btn btn-mini btn-circle btn-gplus"><i class="icon-google-plus"></i></a>
+      </p>
+    </div>
+  </footer>
+
+	<script src="/tpevaluation/js/jquery.min.js"></script>
+ 
+  <script src="/tpevaluation/js/bootstrap.js"></script>
+
+  <script src="/tpevaluation/js/app.js"></script>
+  <script src="/tpevaluation/js/app.plugin.js"></script>
+  <script src="/tpevaluation/js/app.data.js"></script>
+</body>
+</html>

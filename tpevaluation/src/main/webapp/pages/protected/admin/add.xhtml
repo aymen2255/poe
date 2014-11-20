@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+<h:head>
+	<link href="/evaluationTP/bootstrap/css/bootstrap.css" rel="stylesheet" />
+	<link href="/evaluationTP/bootstrap/js/bootstrap.js" rel="stylesheet" />
+</h:head>
+<h:body>
+	<f:view>
+		<h:form>
+			<h:panelGrid border="0" columns="3" cellpadding="5">
+				<h:outputText value="email" />
+				<h:inputText id="email"
+					value="#{userController.user.email}" required="true"
+					requiredMessage="email obligatoire" >
+					<f:validator validatorId="fr.treeptik.validator.ValidatorBean"/>
+					</h:inputText>
+				<h:message for="email" />
+
+				<h:outputText value="Nom" />
+				<h:inputText id="nom" value="#{userController.user.nom}"
+					required="true" requiredMessage="Nom obligatoire" />
+					
+					
+				<h:message for="nom" />
+				<h:outputText />
+				
+				<h:outputText value="dateNaissance" />
+				<h:inputText id="dateNaissance" value="#{userController.user.dateNaissance}"
+					required="true" requiredMessage="Date de naissance obligatoire" p:placeholder="fill me">
+					<f:convertDateTime pattern="dd-MM-yyyy" />
+					</h:inputText>
+				<h:message for="dateNaissance" />
+				<h:outputText />
+				
+				
+				<h:outputText value="Password" />
+				<h:inputText id="password" value="#{userController.user.password}"
+					required="true" requiredMessage="Nom obligatoire" />
+				<h:message for="password" />
+				<h:outputText />
+				
+				
+				<h:commandButton value="Ajouter" action="#{userController.createUser}" />
+			</h:panelGrid>
+		</h:form>
+	</f:view>
+</h:body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<link href="/evaluationTP/bootstrap/css/bootstrap.css" rel="stylesheet" />
+	<link href="/evaluationTP/bootstrap/js/bootstrap.js" rel="stylesheet" />
+</h:head>
+<h:body>
+
+	<f:view>
+		<h:panelGrid columns="2" cellpadding="10">
+			<h:outputLink value="list.xhtml">
+				<h:outputText value="Lister" />
+			</h:outputLink>
+
+			<h:outputLink value="add.xhtml">
+				<h:outputText value="Ajouter" />
+			</h:outputLink>
+		</h:panelGrid>
+		<h:form>
+			<h:panelGrid border="0" columns="3" cellpadding="5">
+
+				<h:outputText value="Id" />
+				<h:inputText id="id" value="#{userController.editUser.id}" />
+				<h:outputText value="nom" />
+				<h:inputText id="nom" value="#{userController.editUser.nom}"
+					required="true" requiredMessage="nom obligatoire" />
+				<h:message for="nom" />
+				<h:outputText value="Email" />
+				<h:inputText id="email" value="#{userController.editUser.email}"
+					required="true" requiredMessage="email obligatoire" />
+				<h:message for="email" />
+				<h:outputText />
+				<h:commandButton value="Mettre à jour"
+					action="#{userController.updateUser}" />
+			</h:panelGrid>
+		</h:form>
+	</f:view>
+
+
+</h:body>
+</html>
